@@ -1,0 +1,36 @@
+<!-- <div>
+  <h2>Post Birds</h2>
+  <input [(ngModel)]="newBird.origin" placeholder="From"/>
+  <input [(ngModel)]="newBird.destination" placeholder="To"/>
+  <input [(ngModel)]="newBird.dep_date" placeholder="Departure Date"/>
+  <input [(ngModel)]="newBird.arr_date" placeholder="Arrival Date"/>
+  <button (click)="postBird()">Submit</button>
+  <h2>Patch Birds</h2>
+  <input [(ngModel)]="currentBird.origin" placeholder="From"/>
+  <input [(ngModel)]="currentBird.destination" placeholder="To"/>
+  <input [(ngModel)]="currentBird.dep_date" placeholder="Departure Date"/>
+  <input [(ngModel)]="currentBird.arr_date" placeholder="Arrival Date"/>
+  <button (click)="patchBird()">Submit</button>
+  <ul>
+    <li *ngFor="let bird of birds">
+      {{bird.id}} {{bird.origin}} {{bird.destination}} {{bird.dep_date}} {{bird.arr_date}}
+      <button (click)="editBird(bird)">Edit</button>
+      <button (click)="removeBird(bird)">Delete</button>
+    </li>
+  </ul>
+</div> -->
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Location</th>
+		<th>Color</th>
+		<th>Picture</th>
+	</tr>
+	<tr *ngFor="let bird of birds">
+		<td>{{bird.name}}</td>
+		<td>{{bird.location}}</td>
+		<td>{{bird.color}}</td>
+		<td><img src="{{bird.picture}}"></td>
+	</tr>
+</table>
